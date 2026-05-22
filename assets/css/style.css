@@ -1,0 +1,682 @@
+
+:root{
+    --color-principal: linear-gradient(#5791bc,#3b81ba,#17507e,#18456a,#022644);
+    --color-secundario: #aed0f1;
+    --color-boton: linear-gradient(#034281, #1463b3, #055780);
+    --letra:'MV Boli';
+}
+/*oficina*/
+.of-contenedor{
+    width:900px;
+    margin:30px auto;
+    background:rgb(221, 224, 208);
+    border:1px solid #ccc;
+}
+.of-titulo {
+    background: linear-gradient(to bottom, #245EDC 0%, #1941A5 50%, #0A246A 100%);
+    color:rgb(231, 232, 195);
+    padding:10px;
+    text-align:center;
+    font-weight:bold;
+}
+.of-formulario{
+    padding:10px;
+}
+input, select{
+    padding:5px;
+    margin:5px;
+}
+textarea{
+    width:95%;
+    height:60px;
+    margin:5px;
+}
+.botones-lado{
+    position:absolute;
+    right:20px;
+    top:100px;
+    background-color: #fdfdd2;
+}
+.botones-lado button{
+    display:block;
+    margin:5px;
+    padding:6px 10px;
+    background-color: #b5ccf5;
+    border-bottom-right-radius: 2px solid black ;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+th, td{
+    border:1px solid #999;
+    padding:6px;
+    text-align:left;
+}
+th{
+    background: linear-gradient(to bottom, #245EDC 0%, #1941A5 50%, #0A246A 100%);
+    color: white;
+}
+
+.footer{
+    padding:10px;
+    text-align:center;
+}
+.footer button{
+    padding:8px 12px;
+    margin:5px;
+    background: linear-gradient(to bottom, #245EDC 0%, #1941A5 50%, #0A246A 100%);
+    color: white;
+}    
+
+/* TRANSFERENCIA*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, "MS Sans Serif", sans-serif;
+    background: #ffffff;
+    font-size: 11px;
+    padding: 20px;
+}
+
+.ventana {
+    width: 470px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    margin: 0 auto;
+}
+
+.titulo-bar {
+    background: #000000;
+    color: #ffffff;
+    padding: 2px 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.titulo-form {
+    background: linear-gradient(to bottom, #245EDC 0%, #1941A5 50%, #0A246A 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    border: 1px solid #003C74;
+}
+.formulario {
+    background: #ffffff;
+    border: 1px solid #808080;
+    border-top: 1px solid #ffffff;
+    padding: 4px 6px 6px 6px;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    border-bottom: 1px solid #aca899;
+}
+
+.fila:last-of-type {
+    border-bottom: none;
+}
+
+.fila label {
+    width: 140px;
+    color: #0A246A;
+    font-weight: bold;
+    font-size: 11px;
+    padding-left: 2px;
+}
+
+.fila input,.fila select {
+    flex: 1;
+    height: 20px;
+    border: 1px solid #000000;
+    font-size: 11px;
+    font-family: Tahoma, sans-serif;
+    padding: 1px 3px;
+    background: #ffffff;
+    color:#000000;
+}
+
+.fila input[readonly] {
+    background: #ffffff;
+}
+
+.select-azul {
+    background: #316AC5 !important;
+    color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.botones {
+    text-align: right;
+    padding-top: 6px;
+    height: 30px;
+}
+.btn-windows {
+    width: 75px;
+    height: 23px;
+    margin-left: 6px;
+    font-size: 11px;
+    font-family: Tahoma, sans-serif;
+    background: linear-gradient(to bottom, #1941A5 0%, #0A246A 50%, #000080 100%);
+    border: 1px solid #000033;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-windows:hover {
+    background: linear-gradient(to bottom, #0A246A 0%, #000080 50%, #000033 100%);
+}
+
+.btn-windows:active {
+    background: linear-gradient(to bottom, #000080 0%, #0A246A 50%, #1941A5 100%);
+}
+* {
+    margin: 0px ;
+    padding: 0px;
+}
+
+/* este es el inicio de unidad*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*administracion unidad administrativa*/
+
+#sol-0{
+    background-color: rgb(47, 45, 45);
+    color: rgb(245, 230, 230);
+    font-family: var(--letra);
+    font-size: 12px;
+    margin: 3px;
+}
+.sol-1{
+    background-image: var(--color-secundario);
+    font-family: var(--letra);
+    margin: 3px;
+}
+#sol-2{
+    background-color: rgb(35, 33, 33);
+    color: white;
+    font-family: var(--letra);
+
+}
+#sol-3{
+    background-image: var(--color-principal);
+    text-align: center;
+    color: white;
+    padding: 1rem;
+
+}
+.gato-1{
+    display: flex;
+    justify-content: center;
+}
+
+#gato-2{
+    width:83%;
+    margin:2rem;
+    background-color:black;
+    color:#f8fcf8;
+}
+#gato-3{
+    background-image:var(--color-boton);
+    border:2px inset rgb(198, 184, 184);
+}
+.boton-miu{
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgb(36, 80, 126);
+    border-radius: 1rem;
+    gap:3rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    padding:5px;
+}
+#boton1-miu,#boton2-miu, #boton3-miu, #boton4-miu, #boton5-miu{
+    background-image: var(--color-principal);
+    padding: 5px;
+    width: 8rem;
+    border:3.4px ridge rgb(199, 195, 195);
+    color:white;
+    font-size: 17px;
+a:link, a:visited{
+    color: white;
+    background-image: var(--color-principal);
+}}
+
+/*finnnnn de administracion unidad*/
+/**inicio de grupo contable*/
+#grupo {
+        margin: 0;
+        padding: 10;
+        box-sizing: border-box;
+    }
+    #grupo body {
+        font-family: Tahoma, Arial, sans-serif;
+        font-size: 11px;
+        background-color: #d4d0c8;
+        padding: 10px;
+    }
+    #grupo .window {
+        width: 800px;
+        background-color: #ece9d8;
+        border: 2px solid #0054e3;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+    #grupo .title-bar {
+        background-color: #000000;
+        color: white;
+        padding: 3px 8px;
+        font-weight: bold;
+        font-size: 11px;
+    }
+    #grupo .header {
+        background: linear-gradient(to bottom, #3b6ea5, #2b4f7c);
+        color: white;
+        padding: 4px 10px;
+        font-size: 11px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #grupo .header-title {
+        background: linear-gradient(to bottom, #3b6ea5, #2b4f7c);
+        color: white;
+        text-align: center;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        border-top: 1px solid #6d8eb3;
+        border-bottom: 1px solid #1a3651;
+    }
+    #grupo .content {
+        padding: 15px;
+        background-color: #ece9d8;
+    }
+    #grupo .form-section {
+        margin-bottom: 10px;
+    }
+    #grupo .form-row {
+        display: flex;
+        margin-bottom: 6px;
+        align-items: center;
+    }
+    #grupo .form-col {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+    }
+    #grupo label {
+        color: navy;
+        width: 90px;
+        font-size: 11px;
+    }
+    #grupo input[type="text"], select, textarea {
+        border: 1px solid #7f9db9;
+        padding: 1px 3px;
+        font-size: 11px;
+        font-family: Tahoma, Arial, sans-serif;
+        background-color: white;
+    }
+    #grupo .input-xs {
+        width: 35px;
+    }
+    #grupo .input-xl {
+        width: 350px;
+        background-color: #ffffe1;
+    }
+    #grupo textarea.input-xl {
+        height: 45px;
+        resize: none;
+        background-color: #ffffe1;
+    }
+    #grupo .checkbox-row {
+        margin-left: 120px;
+        margin-top: -2px;
+        margin-bottom: 8px;
+    }
+    #grupo .checkbox-row label {
+        color: #000080;
+        width: auto;
+        margin-right: 5px;
+    }
+    #grupo table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        border: 1px solid #aca899;
+        margin-top: 5px;
+    }
+    #grupo thead {
+        background: linear-gradient(to bottom, #f3f3f3, #e3e3e3);
+    }
+    
+    #grupo th {
+        border: 1px solid #aca899;
+        padding: 3px 5px;
+        text-align: center;
+        font-weight: bold;
+        color: #000080;
+        font-size: 11px;
+    }
+    #grupo td {
+        border: 1px solid #d4d0c8;
+        padding: 2px 5px;
+        font-size: 11px;
+    }
+    #grupo tr:nth-child(even) {
+        background-color: #f7f7f7;
+    }
+    #grupo .col-codigo {
+        width: 60px;
+        text-align: center;
+    }
+    #grupo .button-bar {
+        padding: 10px 15px;
+        background-color: #ece9d8;
+        display: flex;
+        gap: 5px;
+        border-top: 1px solid #aca899;
+    }
+    #grupo button {
+        padding: 4px 20px;
+        font-size: 11px;
+        font-family: Tahoma, Arial, sans-serif;
+        background: linear-gradient(to bottom, #f0f0f0, #d4d0c8);
+        border: 1px solid #003c74;
+        cursor: pointer;
+    }
+    #grupo button:hover {
+        background: linear-gradient(to bottom, #e3f2ff, #b3d9ff);
+    }
+    #grupo button:disabled {
+        color: #aca899;
+        background: #ece9d8;
+        cursor: not-allowed;
+    }
+/*fin de grupo-contable*/
+
+/* RECURSOS */
+
+/* Reset y Base */
+* { margin: 0; padding: 10; box-sizing: border-box; }
+
+.re-principal {
+    background-color: #F0F0F0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    
+}
+
+/* Colores de Cabecera (Ajustados a tu estilo previo pero más limpios) */
+.re-header1 { background-color: #2C2C2C; padding: 5px 15px; color: white; }
+.re-header2 { background-color: #000; padding: 8px 15px; border-top: 4px solid #FFF; color: white; }
+.re-header3 { background-color: #244E72; padding: 10px; text-align: center; color: white; }
+
+/* Distribución Principal */
+.re-contenido {
+    display: flex;
+    padding: 20px;
+    gap:  50px; /* Separación entre columnas */
+}
+
+/* Menú Lateral */
+.re-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Separación entre bloques de botones */
+}
+
+.re-grupo-gestion, .re-grupo-herramientas {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Botones casi pegados como en la imagen */
+}
+
+/* Estilo de Botón VFP (Plateado Azulado) */
+.vfp-button {
+    background: linear-gradient(to bottom, #e1e9f5 0%, #bdcce3 100%);
+    border: 1px solid #7a8a99;
+    color: #000;
+    padding: 6px 20px;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 0px #fff;
+}
+
+.vfp-button:hover {
+    background: linear-gradient(to bottom, #d1dbe9 0%, #a8bad6 100%);
+}
+
+/* Panel Derecho */
+.re-panel {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Esto empuja el botón Salir abajo */
+}
+
+.re-input-gestion {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.vfp-input-small {
+    width: 150px;
+    text-align: center;
+    border: 1px solid #7a8a99;
+    padding: 3px;
+    background-color: #f7faff;
+}
+
+.vfp-textarea {
+    width: 100%;
+    border: 1px solid #7a8a99;
+    background-color: #f7faff;
+    margin-bottom: 10px;
+}
+
+/* Botón Salir en la esquina */
+.re-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.vfp-button-exit {
+    background: linear-gradient(to bottom, #e1e9f5 0%, #bdcce3 100%);
+    border: 1px solid #7a8a99;
+    padding: 5px 25px;
+    box-shadow: inset 1px 1px 0px #fff;
+}
+/*hasta aqui la rama de recursos*/
+/*unidad administrativo*/
+
+
+body#admi1 {
+ font-family: Tahoma, Arial, sans-serif;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+     
+}
+
+#admi1 .window {
+    background: #e9edf2;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 0px #070707;
+}
+
+#admi1 .main-window {
+    width: 620px;
+}
+
+#admi1 .title-bar {
+    background: #000;
+    color: white;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+#admi1 .blue-banner {
+    background: linear-gradient(to bottom, #6fa1cc, #1d4f7a);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 2px solid #0b2c4d;
+}
+
+#admi1 .form-panel {
+    border: 2px solid #050505;
+    margin: 10px;
+    padding: 1px;
+    background: #f7f7f7;
+}
+
+#admi1 .field {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+#admi1 label {
+    width: 180px;
+    color: #1f4e79;
+    font-weight: bold;
+}
+
+#admi1 input, textarea {
+    border: 2px solid #070707;
+    padding: 4px;
+    text-transform: uppercase;
+}
+
+#admi1 .input-small {
+    width: 60px;
+}
+
+#admi1 .input-full {
+    flex: 1;
+}
+
+#admi1 .textarea-wrapper {
+    display: flex;
+    flex: 1;
+    border: 2px solid #0c0c0c;
+    background: white;
+}
+
+#admi1 textarea {
+    flex: 1;
+    height: 40px;
+    border: none;
+    resize: none;
+}
+
+#admi1 .scrollbar-v {
+    width: 18px;
+    background: #daccb2;
+    text-align: center;
+    font-size: 10px;
+    border-left: 1px solid #cfcbcb;
+}
+
+#admi1 .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin: 20px;
+}
+
+#admi1 .win-btn {
+    background: linear-gradient(to bottom, #2b6d8c, #0f3c4f);
+    color: white;
+    border: 1px solid #0f0f0f;
+    padding: 6px 20px;
+    cursor: pointer;
+}
+
+#admi1 .win-btn.highlight {
+    outline: 3px solid #382b74;
+}
+
+#admi1 .btn-container {
+    position: relative;
+    border-radius: 10px;
+}
+
+#admi1 .tooltip {
+    position: absolute;
+    top: -10px;
+    right: -7;
+    background: white;
+    border: 1px solid black;
+    padding: 8px;
+    font-size: 10px;
+    margin-left: 125%;
+}
+#admi1 .tooltipo {
+    position: absolute;
+    top: -40px;
+    right: -7;
+    background: white;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 10px;
+    margin-left: 105%;
+}
+#admi1 .modal-siaf {
+    position: fixed;
+    bottom: 90px;
+    left: 60%;
+    transform: translateX(-144%);
+    width: 300px;
+    display: none;
+}
+
+#admi1 .title-bar.black {
+    background: black;
+}
+
+#admi1 .modal-body {
+    display: flex;
+    align-items: center;
+    padding: 1;
+    background: #ececec;
+}
+
+#admi1 .icon-info {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #2c5aa0;
+    color: #2c5aa0;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 2px;
+}
+
+#admi1 .modal-footer {
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+}
+
+
