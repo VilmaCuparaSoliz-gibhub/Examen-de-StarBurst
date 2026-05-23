@@ -83,9 +83,10 @@
 
 }
 .pantalla1{
+
     display: grid;
-    grid-template-columns:20% 93% ;
-    width: black;
+    grid-template-columns:20% 80% ;
+    width: 100%;
 }
 #columna1{
     border: 2px outset rgb(204, 191, 221);

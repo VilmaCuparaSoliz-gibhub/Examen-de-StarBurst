@@ -1,4 +1,5 @@
 // oficina.js
+// oficina.js
 const url = "http://127.0.0.1:3000/oficina";
 function nuevo(){
     document.getElementById("txtOficina").value = "";
