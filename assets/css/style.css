@@ -215,11 +215,110 @@
     opacity: 0.85;
 }
 
+<<<<<<< HEAD
 #mensaje-estado {
     text-align: center;
     font-family: var(--letra);
     font-size: 13px;
     min-height: 20px;
+=======
+/* CONTENEDOR BOTON */
+
+#admi1 .btn-container {
+    position: relative;
+    border-radius: 10px;
+}
+
+/* TOOLTIP */
+
+#admi1 .tooltip {
+    position: absolute;
+    top: -10px;
+    right: -7;
+
+    background: white;
+
+    border: 1px solid black;
+
+    padding: 8px;
+
+    font-size: 10px;
+
+    margin-left: 125%;
+}
+
+
+#admi1 .tooltipo {
+    position: absolute;
+    top: -400px;
+    right: -230;
+
+    background: white;
+
+    border: 1px solid black;
+
+    padding: 10px;
+
+    font-size: 10px;
+
+    margin-left: 205%;
+}
+
+
+#admi1 .modal-siaf {
+    position: fixed;
+    
+   bottom: 186px;
+    left: 26%;
+
+    transform: translateX(-96%,);
+
+    width: 296px;
+
+    display: none;
+    
+}
+
+
+
+#admi1 .title-bar.black {
+    background: black;
+}
+
+
+#admi1 .modal-body {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    background: #ececec;
+    justify-content: center;
+}
+
+
+#admi1 .icon-info {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 60%;
+
+    border: 1px solid #2c5aa0;
+
+    color: #2c5aa0;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    text-align: center;
+
+    line-height: 52px;
+
+    margin-right: 10px;
+    
+}
+#admi1 .modal-footer {
+    display: flex;
+    justify-content: center;
+>>>>>>> 2362ec3 (subiendo administrativa)
     padding: 4px;
     color: #022644;
 }

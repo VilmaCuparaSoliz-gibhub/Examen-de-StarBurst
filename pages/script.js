@@ -1,6 +1,4 @@
-// ======================================
-// API
-// ======================================
+
 
 const API =
 "https://fuerza-g-grupo-1-2.onrender.com/unidadadmin";
@@ -9,15 +7,12 @@ const modal =
 document.getElementById("modal");
 
 
-// ======================================
-// ABRIR MODAL + POST
-// ======================================
 
 async function abrirModal(){
 
     try{
 
-        // DATOS DEL FORMULARIO
+
 
         const unidad =
         document.getElementById("unidad").value;
@@ -29,7 +24,6 @@ async function abrirModal(){
         document.getElementById("descripcion").value;
 
 
-        // VALIDAR
 
         if(
             unidad === "" ||
@@ -43,7 +37,6 @@ async function abrirModal(){
         }
 
 
-        // OBJETO API
 
         const datos = {
 
@@ -60,8 +53,6 @@ async function abrirModal(){
             ciudad
         };
 
-
-        // POST
 
         const respuesta =
         await fetch(API,{
@@ -112,20 +103,12 @@ async function abrirModal(){
 }
 
 
-// ======================================
-// CERRAR MODAL
-// ======================================
-
 function cerrarModal(){
 
     modal.style.display =
     "none";
 }
 
-
-// ======================================
-// GET
-// ======================================
 
 async function obtenerDatos(){
 
@@ -152,10 +135,6 @@ async function obtenerDatos(){
     }
 }
 
-
-// ======================================
-// DELETE
-// ======================================
 
 async function eliminarDato(){
 
@@ -209,10 +188,6 @@ async function eliminarDato(){
 }
 
 
-// ======================================
-// SALIR
-// ======================================
-
 function salirSistema(){
 
     let salir =
@@ -226,10 +201,6 @@ function salirSistema(){
     }
 }
 
-
-// ======================================
-// GET AUTOMATICO
-// ======================================
 
 window.onload =
 function(){
