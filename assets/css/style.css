@@ -1,17 +1,28 @@
+<<<<<<< HEAD
 /*inicio de unidad*/
 * {
+=======
+/* iniciar-sesion */
+:root{
+    --color-principal: linear-gradient(#5791bc,#3b81ba,#17507e,#18456a,#022644);
+    --color-secundario: #aed0f1;
+    --color-boton: linear-gradient(#034281, #1463b3, #055780);
+    --letra:'MV Boli';
+}
+
+*{
+>>>>>>> 2d9b80c (modificado)
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 :root {
     --color-principal: linear-gradient(#5791bc, #3b81ba, #17507e, #18456a, #022644);
     --color-secundario: #c2dbf4;
     --color-boton: linear-gradient(#034281, #1463b3, #055780);
     --letra: 'MV Boli';
-
-    --letra:'arial';
 }
 
 #sol-0 {
@@ -215,110 +226,146 @@
     opacity: 0.85;
 }
 
-<<<<<<< HEAD
 #mensaje-estado {
     text-align: center;
     font-family: var(--letra);
     font-size: 13px;
     min-height: 20px;
-=======
-/* CONTENEDOR BOTON */
-
-#admi1 .btn-container {
-    position: relative;
-    border-radius: 10px;
-}
-
-/* TOOLTIP */
-
-#admi1 .tooltip {
-    position: absolute;
-    top: -10px;
-    right: -7;
-
-    background: white;
-
-    border: 1px solid black;
-
-    padding: 8px;
-
-    font-size: 10px;
-
-    margin-left: 125%;
-}
-
-
-#admi1 .tooltipo {
-    position: absolute;
-    top: -400px;
-    right: -230;
-
-    background: white;
-
-    border: 1px solid black;
-
-    padding: 10px;
-
-    font-size: 10px;
-
-    margin-left: 205%;
-}
-
-
-#admi1 .modal-siaf {
-    position: fixed;
-    
-   bottom: 186px;
-    left: 26%;
-
-    transform: translateX(-96%,);
-
-    width: 296px;
-
-    display: none;
-    
-}
-
-
-
-#admi1 .title-bar.black {
-    background: black;
-}
-
-
-#admi1 .modal-body {
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    background: #ececec;
-    justify-content: center;
-}
-
-
-#admi1 .icon-info {
-    width: 35px;
-    height: 35px;
-
-    border-radius: 60%;
-
-    border: 1px solid #2c5aa0;
-
-    color: #2c5aa0;
-
-    font-size: 22px;
-    font-weight: bold;
-
-    text-align: center;
-
-    line-height: 52px;
-
-    margin-right: 10px;
-    
-}
-#admi1 .modal-footer {
-    display: flex;
-    justify-content: center;
->>>>>>> 2362ec3 (subiendo administrativa)
     padding: 4px;
     color: #022644;
+=======
+body{
+    background-image: var(--color-principal);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenedor{
+    width: 620px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+}
+
+.titulo-superior{
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.banner{
+    background-image: var(--color-principal);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px ;
+}
+
+.banner img{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.banner-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-texto h1{
+    font-size: 38px;
+    font-family: 'Snap ITC';
+    margin-bottom: 5px;
+}
+
+.subtitulo{
+    font-size: 16px;
+    font-family: 'Bradley Hand ITC';
+}
+
+.login{
+    width: 320px;
+    margin: 25px auto;
+    background: var(--color-secundario);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.login h2{
+    color: #003c74;
+    border-bottom: 2px solid #6ea4d8;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+    font-size: 25px;
+}
+
+.fila{
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fila label{
+    font-size: 15px;
+    color: #35587c;
+    font-weight: bold;
+}
+
+.fila input{
+    width: 160px;
+    height: 30px;
+    border: 1px solid #7da8cf;
+    border-radius: 5px;
+    padding-left: 8px;
+    font-size: 14px;
+}
+
+.parte-inferior{
+    margin-top: 18px;
+    border-top: 1px solid #8ab3da;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parte-inferior span{
+    font-size: 11px;
+    font-weight: bold;
+    color: #003c74;
+}
+
+.parte-inferior button{
+    width: 85px;
+    height: 32px;
+    background-image: var(--color-boton);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.parte-inferior button:hover{
+    opacity: 0.9;
+}
+
+.footer{
+    background-image: var(--color-principal);
+    color: white;
+    padding: 15px 20px;
+    font-size: 14px;
+    line-height: 1.5;
+>>>>>>> 2d9b80c (modificado)
 }
