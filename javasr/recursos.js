@@ -1,3 +1,5 @@
+
+const API_BASE_url = "https://fuerza-g-grupo-1-2.onrender.com";
 function abrirModal() {
     document.getElementById("modal").style.display = "flex";
 }
@@ -70,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnSalir) {
         btnSalir.addEventListener("click", () => {
             if(confirm("¿Está seguro de que desea salir de la Administración de Recursos?")) {
-                window.location.href = "index.html"; // Te redirecciona a tu página de inicio si existe
+                window.location.href = "index.html"; 
             }
         });
     }
@@ -78,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnCerrarModal) {
         btnCerrarModal.addEventListener("click", cerrarModal);
     }
-
    
     if (btnGuardarModal) {
         btnGuardarModal.addEventListener("click", () => {
