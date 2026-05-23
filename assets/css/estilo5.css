@@ -1,0 +1,77 @@
+
+
+
+* {
+    margin: 0px ;
+    padding: 0px;
+}
+:root {
+    --color-principal: linear-gradient(#5791bc, #3b81ba, #17507e, #18456a, #022644);
+    --color-secundario: #c2dbf4;
+    --color-boton: linear-gradient(#034281, #1463b3, #055780);
+    --letra: 'MV Boli';
+}
+
+/* RECURSOS */
+
+.re-principal{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.re-header1{
+    background-color: #2C2C2C;
+    padding: 3px;
+}
+.re-header1 h4{
+    color: white;
+}
+
+.re-header2{
+    border-top: 6px solid white;
+    background-color: black;
+    padding: 10px;
+}
+.re-header2 h5{
+    color: white;
+}
+
+.re-header3{
+    background-image:var(--color-principal);
+    padding: 15px;
+}
+.re-header3 h1{
+    color: white;
+    text-align: center;
+}
+
+.re-contenido{
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+}
+
+.re-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.re-panel{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.re-panel textarea{
+    border: 1px solid black;
+    padding: 10px;
+}
+.vfp-button, .vfp-button-exit{
+    background-image: var(--color-principal);
+    width: 10rem;
+    padding: 10px;
+    text-align: center;
+    color:white;
+    margin: 3px;
+}
+/*hasta aqui la rama de recursos*/
