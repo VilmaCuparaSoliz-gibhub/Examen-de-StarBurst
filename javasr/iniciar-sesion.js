@@ -19,6 +19,14 @@ async function login(){
 
         alert("Bienvenido al sistema");
 
+        alert("Se debe cambiar la contraseña del administrador.");
+
+        localStorage.setItem("usuarioIngresado", usuario);
+
+        localStorage.setItem("passwordIngresado", password);
+
+        window.open("/proyecto/assets/pages/seguridad.html", "_self");
+
     }else{
 
         alert("Usuario o contraseña incorrectos");
@@ -26,6 +34,3 @@ async function login(){
     }
 
 }
-
-recibirDatosDeInicioSesion(usuarioIngresado, passwordIngresado);
-window.open("seguridad.html", "_self");
