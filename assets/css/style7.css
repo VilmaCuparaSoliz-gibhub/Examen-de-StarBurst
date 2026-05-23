@@ -1,0 +1,68 @@
+* {
+  margin: 0; 
+  background-color: #ece9d8;
+  font-family: Tahoma, Arial, sans-serif; 
+  font-size: 11px; 
+}
+  :root{
+    --color-principal: linear-gradient(#5791bc,#3b81ba,#17507e,#18456a,#022644);
+    --color-secundario: #aed0f1;
+    --color-boton: linear-gradient(#034281, #1463b3, #055780);
+    --letra:'MV Boli';
+}
+.ventana { 
+  width: 420px; 
+  border: 2px solid #022644; 
+  background: var(--color-principal) ; 
+  margin: 50px auto; 
+}
+.titulo { 
+  background: var(--color-boton) ;
+  color: white; 
+  padding: 4px 8px; 
+  font-weight: bold; 
+}
+.subtitulo { 
+  background:var(--color-secundario) ;
+  color:#042947; 
+  text-align: center; 
+  padding: 6px; 
+  font-weight: bold; 
+}
+.contenido { 
+  padding: 15px; 
+  background-color: #aed0f1;
+  border: 2px inset #ece9d8; 
+  margin: 10px; 
+}
+.fila {
+  background-color: #aed0f1;
+  margin-bottom: 12px; 
+  display: flex; 
+  align-items: center; 
+}
+.fila label { 
+  width: 80px; 
+  background-color: #aed0f1;
+}
+.fila select { 
+  flex: 1; 
+  height: 22px; 
+  border: 2px inset  #aed0f1; 
+  background: white; 
+}
+.botones { 
+  border-color: #fff #404040 #404040 #fff; 
+  background-color: #aed0f1;
+  color:#404040;
+  text-align: center; 
+  margin-top: 15px; 
+}
+.botones button {  
+  width: 75px; 
+  height: 23px; 
+  margin: 0 5px;  
+  border: 2px outset #042947 ; 
+  color:white; 
+  background:#055780 ; 
+}
