@@ -1,0 +1,223 @@
+/*inicio de unidad*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-principal: linear-gradient(#5791bc, #3b81ba, #17507e, #18456a, #022644);
+    --color-secundario: #c2dbf4;
+    --color-boton: linear-gradient(#034281, #1463b3, #055780);
+    --letra: 'MV Boli';
+}
+
+#sol-0 {
+    background-color: rgb(47, 45, 45);
+    color: rgb(245, 230, 230);
+    font-family: var(--letra);
+    font-size: 13px;
+    padding: 6px 10px;
+    margin: 3px;
+    letter-spacing: 1px;
+}
+
+.sol-1 {
+    background-color: var(--color-secundario);
+    font-family: var(--letra);
+    margin: 3px;
+    padding-bottom: 10px;
+}
+
+#sol-2 {
+    background-color: rgb(35, 33, 33);
+    color: white;
+    font-family: var(--letra);
+    padding: 3px 8px;
+    font-size: 12px;
+}
+
+#sol-3 {
+    background-image: var(--color-principal);
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.gato-1 {
+    display: flex;
+    justify-content: center;
+}
+
+#gato-2 {
+    width: 83%;
+    margin: 1.5rem;
+    background-color: rgb(252, 239, 239);
+    color: #faeeee;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+#gato-2 thead tr {
+    background-image: var(--color-boton);
+    border: #022644;
+}
+
+#gato-3, #gato-4, #gato-5 {
+    background-image: var(--color-boton);
+    padding: 8px 12px;
+    text-align: left;
+    color: rgb(212, 205, 205);
+    font-family: var(--letra);
+    font-size: 14px;
+    border:2px solid #022644;
+}
+
+#gato-2 tbody tr {
+    border: 1px solid rgba(37, 36, 36, 0.15);
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+#gato-2 tbody tr:hover {
+    background-color: rgba(23, 80, 126, 0.45);
+}
+
+#gato-2 tbody tr.seleccionado {
+    background-color: rgba(20, 99, 179, 0.65);
+    outline: 2px solid #5791bc;
+}
+
+#gato-2 tbody td {
+    padding: 7px 12px;
+    border: 2px groove black;
+    color: #232424;
+    font-family: var(--letra);
+}
+
+.boton-miu {
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgb(36, 80, 126);
+    border-radius: 1rem;
+    gap: 2rem;
+    margin: 8px 5rem 0 5rem;
+    padding: 8px 5px;
+    flex-wrap: wrap;
+}
+
+#boton1-miu, #boton2-miu, #boton3-miu, #boton4-miu, #boton5-miu {
+    background-image: var(--color-principal);
+    padding: 6px 10px;
+    width: 8rem;
+    border: 3.4px ridge rgb(242, 227, 227);
+    color: white;
+    font-size: 15px;
+    font-family: var(--letra);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.15s, transform 0.1s;
+}
+
+#boton1-miu:hover, #boton2-miu:hover, #boton3-miu:hover,
+#boton4-miu:hover, #boton5-miu:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+#boton1-miu:active, #boton2-miu:active, #boton3-miu:active,
+#boton4-miu:active, #boton5-miu:active {
+    transform: translateY(0);
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.activo {
+    display: flex;
+}
+
+.modal-caja {
+    background: #68a8d9;
+    border: 3px ridge rgb(199, 195, 195);
+    border-radius: 8px;
+    width: 360px;
+    padding: 0;
+    font-family: var(--letra);
+    box-shadow: 0 8px 32px rgba(2, 38, 68, 0.45);
+}
+
+.modal-titulo {
+    background-image: var(--color-principal);
+    color: white;
+    padding: 8px 14px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border-radius: 4px 4px 0 0;
+}
+
+.modal-cuerpo {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-cuerpo label {
+    font-size: 13px;
+    color: #022644;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.modal-cuerpo input {
+    width: 100%;
+    padding: 5px 8px;
+    border: 2px inset rgb(198, 184, 184);
+    background: #f0f8ff;
+    font-family: var(--letra);
+    font-size: 13px;
+    color: #022644;
+    border-radius: 3px;
+}
+
+.modal-pie {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px 16px;
+    border-top: 1px solid #5791bc;
+}
+
+.modal-pie button {
+    background-image: var(--color-principal);
+    color: white;
+    border: 2px ridge rgb(199, 195, 195);
+    padding: 5px 18px;
+    font-family: var(--letra);
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.modal-pie button:hover {
+    opacity: 0.85;
+}
+
+#mensaje-estado {
+    text-align: center;
+    font-family: var(--letra);
+    font-size: 13px;
+    min-height: 20px;
+    padding: 4px;
+    color: #022644;
+}
