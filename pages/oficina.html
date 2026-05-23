@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="of-contenedor">
+    <div class="of barra"></div>
+        <div class="of-titulo">OFICINA</div>
+        <div class="of-formulario">
+<label>Oficina:</label>
+<input type="text" id ="txtOficina" value="1">
+<select>
+<option>100 DIRECCION INLASA</option>
+</select>
+<select>
+<option>ACTIVO</option>
+</select>
+<br>
+<label>Observación:</label>
+<textarea id="txtObservacion"></textarea>
+</div>
+<div class="botones-lado">
+<button>Nuevo</button>
+<button>Modificar</button>
+<button disabled>Activar</button>
+<button>Inactivar</button>
+</div>
+<table>
+<tr>
+<th>Cod.</th>
+<th>Responsable</th>
+<th>Cargo</th>
+<th>CI</th>
+<th>Expedido</th>
+<th>Estado</th>
+</tr>
+<tr>
+<tr><td>1</td>
+    <td>DRA. GLADYS QUIROGA</td>
+    <td>DIRECTORA</td>
+    <td></td>
+    <td></td>
+    <td>ACTIVO</td>
+</tr>
+<tr>
+    <td>2</td><td>DR. WALTER AGREDA COCA</td><td>DIRECTOR GENERAL EJECUTIVO</td><td></td><td></td><td>ACTIVO</td>
+</tr>
+<tr>
+    <td>3</td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+    <td>4</td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+    <td>5</td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+    <td>6</td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+    <td>7</td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+    <td>8</td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+    <td>9</td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+    <td>10</td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+</table>
+<div class="footer"> 
+<button onclick="activar()">Activar</button>    
+<button onclick="inactivar()">Inactivar</button>
+<button onclick="nuevo()">Nuevo</button>
+<button onclick="nodificar()">Modificar</button>
+<button onclick="guardar()">Guardar</button>
+<button onclick="deshacer()">Deshacer</button>
+<button onclinck="salir()">Salir</button>
+</div>
+</div>
+<script src="../script/oficina.js"></script>
+</body>
+</html>
