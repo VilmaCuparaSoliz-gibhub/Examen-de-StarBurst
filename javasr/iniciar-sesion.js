@@ -25,7 +25,7 @@ async function login(){
 
         localStorage.setItem("passwordIngresado", password);
 
-        window.open("/proyecto/assets/pages/seguridad.html", "_self");
+       window.open("../pages/seguridad.html", "_self");
 
     }else{
 
