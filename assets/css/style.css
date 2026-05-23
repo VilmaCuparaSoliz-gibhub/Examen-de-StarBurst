@@ -10,6 +10,8 @@
     --color-secundario: #c2dbf4;
     --color-boton: linear-gradient(#034281, #1463b3, #055780);
     --letra: 'MV Boli';
+
+    --letra:'arial';
 }
 
 #sol-0 {

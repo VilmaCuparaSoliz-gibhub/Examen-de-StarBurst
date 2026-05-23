@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        SIAF - Unidad Administrativa
+    </title>
+
+   <link rel="stylesheet" href="../assets/css/estyle2.css">
+
+</head>
+
+<body id="admi1">
+
+    <div class="window main-window">
+
+
+        <div class="title-bar">
+
+            <span>
+                Unidad Administrativa
+            </span>
+
+            <div class="title-buttons">
+
+                <span>_</span>
+
+                <span>□</span>
+
+                <span>×</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="blue-banner">
+
+            UNIDAD ADMINISTRATIVA
+
+        </div>
+
+
+
+        <div class="form-panel">
+
+
+            <div class="field">
+
+                <label>
+                    Unidad Administrativa:
+                </label>
+
+                <input
+                    type="text"
+
+                    id="unidad"
+
+                    value="025"
+
+                    class="input-small"
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label>
+                    Ciudad:
+                </label>
+
+                <input
+                    type="text"
+
+                    id="ciudad"
+
+                    value="LA PAZ"
+
+                    class="input-full"
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label>
+                    Descripción:
+                </label>
+
+                <div class="textarea-wrapper">
+
+                    <textarea id="descripcion">
+GACETA OFICIAL DE BOLIVIA
+                    </textarea>
+
+                    <div class="scrollbar-v">
+
+                        ▲
+                        <br>
+
+                        █
+                        <br>
+
+                        ▼
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="actions">
+
+            <div class="btn-container ">
+
+                <div class="tooltipo">
+
+                    
+                </div>
+
+                <button
+                    class="win-btn highlight"
+                onclick="abrirModal()">
+
+                    Grabar
+
+                </button>
+
+            </div>
+
+
+            <button
+                class="win-btn"
+
+                onclick="eliminarDato(1)"
+            >
+            
+
+                Salir
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="window modal-siaf"
+
+        id="modal"
+    >
+
+
+        <div class="title-bar black">
+
+            <span>
+                VSIAF
+            </span>
+
+            <span
+                onclick="cerrarModal()"
+
+                style="cursor:pointer;"
+            >
+
+                ×
+
+            </span>
+
+        </div>
+
+
+        <div class="modal-body">
+
+            <div class="icon-info">
+
+                i
+
+            </div>
+
+            <div>
+
+                Los datos fueron ingresados correctamente
+
+            </div>
+
+        </div>
+
+
+
+        <div class="modal-footer">
+
+            <div class="btn-container">
+
+                
+
+                </div>
+
+                <button
+                    class="win-btn"
+
+                    onclick="cerrarModal()"
+                >
+
+                    Aceptar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
