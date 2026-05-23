@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/estilo5.css">
+</head>
+<body>
+<div class="re-principal">
+    <div class="re-header1"><h4>SISTEMA DE ACTIVOS FIJOS</h4></div>
+    <div class="re-header2"><h5>Recursos</h5></div>
+    <div class="re-header3"><h1>ADMINISTRACION DE RECURSOS</h1></div>
+
+    <div class="re-contenido">
+        <div class="re-menu">
+            <div class="re-grupo-gestion">
+                <button id="btnCerrar" class="vfp-button">Cerrar Gestión</button><br>
+                <button id="btnCambiar" class="vfp-button">Cambiar Gestión</button>
+            </div>
+            
+            <div class="re-grupo-herramientas">
+                <button id="btnImportar" class="vfp-button">Importar/Exportar</button><br>
+                <button id="btnIndices" class="vfp-button">Índices UFV</button><br>
+                <button id="btnSeguridad" class="vfp-button">Seguridad</button><br>
+                <button id="btnReindexar" class="vfp-button">Re-indexar</button><br>
+                <button id="btnMigrador" class="vfp-button">Migrador</button><br>
+            </div>
+        </div>
+
+        <div class="re-panel">
+            <div class="re-input-gestion">
+                <input type="text" value="2013" class="vfp-input-small">
+            </div>
+            
+            <textarea rows="6" class="vfp-textarea"></textarea>
+            
+            <div class="re-footer">
+                <button id="btnSalir" class="vfp-button-exit">Salir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center;">
+    <div style="background: #ffffff; width: 450px; padding: 25px; border-radius: 8px; box-shadow: 0px 4px 15px rgba(0,0,0,0.3); font-family: sans-serif;">
+        <h2 style="margin-top: 0; color: #333; border-bottom: 2px solid #333; padding-bottom: 8px;">Cambiar Gestión Activa</h2>
+        
+        <p style="color: #666; font-size: 14px;">Ingrese el año de la gestión que desea activar para el control de activos fijos:</p>
+        
+        <div style="margin: 20px 0;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Año Gestión:</label>
+            <input type="number" value="2026" style="width: 90%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <div style="text-align: right; margin-top: 20px;">
+            <button id="btnGuardarModal" style="background: #28a745; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; margin-right: 10px;">Guardar</button>
+            <button id="btnCerrarModal" style="background: #dc3545; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">Cerrar Ventana</button>
+        </div>
+    </div>
+</div>
+
+    <script src="../javasr/recursos.js"></script>
+</body>
+</html>

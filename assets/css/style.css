@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 :root {
     --color-principal: linear-gradient(#5791bc, #3b81ba, #17507e, #18456a, #022644);
     --color-secundario: #c2dbf4;
@@ -161,11 +162,146 @@
 
 .modal-cuerpo {
     padding: 16px;
+=======
+
+
+* {
+    margin: 0px ;
+    padding: 0px;
+}
+
+/* este es el inicio de unidad*/
+.un-principal {
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.un-principal div:nth-child(1){
+    background-color: #2C2C2C;
+    padding:3px;
+    h4 {
+        color: white;
+    }
+}
+.un-principal div:nth-child(2){
+    border-top: 6px solid white;
+    background-color: black;
+    padding: 10px;
+    h5{
+        color:white;
+
+    }
+}
+.un-principal div:nth-child(3){
+    background-color: #244E72;
+    padding: 15px;
+    h1{
+        color: white;
+        text-align: center;
+    }
+}
+/*mi tabla*/
+.un-tabla{
+    padding:38px;
+    display: flex;
+    justify-content: center;
+}
+tr {
+    background-color: #033E80;
+    color:white;
+    border: 56px solid black;
+    padding: 20px;
+    text-align: center;
+
+}
+th:nth-child(3){
+    width:42%;
+}
+
+input {
+    background-color:white;
+    border: 1px solid black;
+    padding: 5px 8px;
+    width: 100%;
+    font-size: 1.0rem;
+
+}
+input:focus{
+    background-color: #127EB2;
+    color: rgb(242, 229, 229);
+
+}
+input:not(:placeholder-shown){
+    background-color: #B7BDFF;
+    color: white;
+}
+.un-boton{
+    color: white;
+    padding: 9px 17px;
+    gap: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    border:3px solid#033E80; 
+
+}
+button{
+    display: flex;
+    justify-content: center;
+    background-color: #003043;
+    border: 3px solid rgb(248, 245, 245);
+    border: 3px solid rgb(198, 211, 240);
+    padding-bottom: 12px 15 px;
+}
+
+/* RECURSOS */
+
+.re-principal{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.re-header1{
+    background-color: #2C2C2C;
+    padding: 3px;
+}
+.re-header1 h4{
+    color: white;
+}
+
+.re-header2{
+    border-top: 6px solid white;
+    background-color: black;
+    padding: 10px;
+}
+.re-header2 h5{
+    color: white;
+}
+
+.re-header3{
+    background-color: #244E72;
+    padding: 15px;
+}
+.re-header3 h1{
+    color: white;
+    text-align: center;
+}
+
+.re-contenido{
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+}
+
+.re-menu{
+>>>>>>> f2f7450 (modifique la estructura de estilos en style.css)
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+<<<<<<< HEAD
 .modal-cuerpo label {
     font-size: 13px;
     color: #022644;
@@ -215,4 +351,15 @@
     padding: 4px;
     color: #022644;
 }
-
+=======
+.re-panel{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.re-panel textarea{
+    border: 1px solid black;
+    padding: 10px;
+}
+/*hasta aqui la rama de recursos*/
+>>>>>>> f2f7450 (modifique la estructura de estilos en style.css)
