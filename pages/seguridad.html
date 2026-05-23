@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEGURIDAD - VSIAF</title>
+    <link rel="stylesheet" href="../assets/css/estilo4.css">
+</head>
+<body>
+
+        <div class="ventana-principal"> 
+    
+    <div class="barra-superior">SEGURIDAD</div>
+    <div class="barra-titulo">SEGURIDAD</div>
+
+
+    <!-- ✅ PRIMER SUBCUADRO: USUARIO HASTA TIPO DE USUARIO -->
+    <div class="subcuadro-redondeado-grande">
+
+        <!-- Usuario y contraseña -->
+        <div class="subcuadro-redondeado-pequeno">
+            <div class="fila fila-top">
+                <span class="etiqueta">USUARIO:</span>
+                <input type="text" id="usuario" class="caja-celeste caja-corta" value="admin" readonly>
+                <span class="etiqueta">CONTRASEÑA ASIGNADA:</span>
+                <input type="password" id="clave" class="caja-celeste caja-media" value="***">
+            </div>
+        </div>
+
+        <!-- Nombre y descripción -->
+        <div class="fila">
+            <span class="etiqueta">NOMBRE<br>COMPLETO:</span>
+            <input type="text" id="nombre" class="caja-celeste caja-larga" value="administrador">
+        </div>
+        <div class="fila">
+            <span class="etiqueta">DESCRIPCIÓN:</span>
+            <input type="text" id="descripcion" class="caja-celeste caja-muy-larga" value="">
+        </div>
+
+        <!-- Tipo de usuario -->
+        <div class="fila fila-columna">
+            <span class="etiqueta">TIPO DE<br>USUARIO:</span>
+            <div class="zona-radio">
+                <div><input type="radio" name="tipo"> <label>Operador</label></div>
+                <div><input type="radio" name="tipo" checked> <label>Administrador</label></div>
+            </div>
+        </div>
+
+    </div> <!-- ✅ FIN PRIMER SUBCUADRO -->
+
+
+    <!-- ✅ SEGUNDO SUBCUADRO: SOLO BOTONES (JUSTO DEBAJO) -->
+    <div class="subcuadro-botones">
+        <div class="fila fila-botones">
+    <!-- ✅ OJO: Agregué id="b1", id="b2", ... a cada botón -->
+    <button id="b1" class="boton-azul letra-plomo">Primero</button>
+    <button id="b2" class="boton-azul letra-plomo">Anterior</button>
+    <button id="b3" class="boton-azul letra-plomo">Siguiente</button>
+    <button id="b4" class="boton-azul letra-plomo">Último</button>
+    <button id="b5" class="boton-azul letra-plomo">Nuevo</button>
+    <button id="b6" class="boton-azul letra-plomo">Editar</button>
+    <button id="b7" class="boton-azul letra-plomo">Guardar</button>
+    <button id="b8" class="boton-azul letra-plomo">Deshacer</button>
+    <button id="b9" class="boton-azul letra-plomo">Salir</button>
+</div>
+    </div> 
+
+
+</div> 
+
+    <script src="../script/seguridad.js"></script>
+</body>
+</html>

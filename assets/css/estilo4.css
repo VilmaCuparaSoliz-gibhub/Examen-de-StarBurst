@@ -1,0 +1,192 @@
+:root {
+    --color-barra-sup: #000000;
+    --color-barra-titulo: linear-gradient(#5791bc, #17507c, #022644);
+    --color-celeste: #b9d8f5;
+    --color-azul-botones: #888888;
+    --color-letra-blanco: #ffffff;
+    --color-letra-negra: #000000;
+    --letra: 'arial', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--letra);
+    font-size: 13px;
+}
+
+body {
+    background-color: #ffffff;
+    padding: 15px;
+    color:white;
+}
+
+.ventana-principal {
+    width: 605px;
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: #fff;
+    padding: 0;
+}
+
+/* Barra superior negra */
+.barra-superior {
+    background-color: var(--color-barra-sup);
+    color: var(--color-letra-blanca);
+    padding: 3px 10px;
+    font-weight: bold;
+    border: 1px solid var(--color-barra-sup);
+    border-bottom: none;
+}
+
+
+.barra-titulo {
+    background-image: var(--color-barra-titulo);
+    color: var(--color-letra-blanca);
+    text-align: center;
+    padding: 6px 0;
+    font-weight: bold;
+    border: 1px solid var(--color-barra-sup);
+    border-bottom: none;
+}
+
+
+.cuadro-grande {
+    background-color: #ffffff;
+    border: 1px solid var(--color-barra-sup);
+    padding: 8px;
+}
+
+
+.subcuadro-redondeado-grande {
+    border: 1px solid black;
+    border-radius: 8px; /* ESQUINAS REDONDEADAS */
+    padding: 8px ;
+    margin: 6px;
+    margin-bottom: 3px;
+}
+
+
+.subcuadro-redondeado-pequeno {
+    border: 1px solid black;
+    border-radius: 6px; /* ESQUINAS REDONDEADAS */
+    padding: 4px 7px;
+    margin-bottom:11px;
+    width: fit-content;
+    margin-left: 205px; 
+    white-space: nowrap;/* QUEDA AJUSTADO AL CONTENIDO */
+}
+
+.contenido-dentro {
+    padding: 0 5px;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.fila:last-child { margin-bottom: 0; }
+
+/* Fila de usuario y contraseña */
+.fila-top {
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+/* Fila para poner opciones una debajo de otra */
+.fila-columna {
+    align-items: flex-start;
+}
+
+/* Espacio antes de los botones */
+.seccion-tipo {
+    margin: 12px 5px;
+}
+
+/* ✅ ETIQUETAS: SIEMPRE VISIBLES */
+.etiqueta {
+    font-size: 11px;
+    padding-right: 5px;
+    font-weight: 790;
+    color: #042c4b;
+    display: inline-block;
+}
+
+.caja-celeste {
+    background-color: var(--color-celeste);
+    border: 1px solid var(--color-barra-sup);
+    padding: 2px 4px;
+    height: 22px;
+    font-size: 12px;
+    color: var(--color-letra-negra);
+}
+
+/* ✅ TAMAÑOS EXACTOS COMO TU IMAGEN */
+.caja-corta {
+    width: 50px; 
+    }   /* Usuario */
+.caja-media { 
+    width: 80px;
+ }  /* Contraseña */
+.caja-larga{ 
+    width: 320px;
+ }  /* Nombre Completo */
+.caja-muy-larga { 
+    width: 315px;
+    height: 30px;
+} 
+
+/* ✅ TIPO DE USUARIO: UNO ARRIBA, UNO ABAJO */
+.zona-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+    margin-top: 2px;
+}
+.opcion-radio {
+    display: flex;
+    align-items: center;
+}
+.zona-radio input { 
+    margin-right: 4px; 
+}
+.zona-radio label { 
+    color: #888;
+    font-weight: normal;
+ }
+
+/* ✅ BOTONES: AZUL OSCURO, LETRA BLANCA, DENTRO DEL MISMO CUADRO */
+.fila-botones { gap: 2px; padding: 0 5px; }
+.boton-azul {
+    height: 24px;
+    padding: 0 10px;
+    border: 1px solid var(--color-barra-sup);
+    cursor: pointer;
+    font-size: 12px;
+    background-color: var(--color-azul-botones);
+}
+.cuadrado-botones-separado{
+    border: 1px solid var(--color-barra-sup);
+    padding: 8px 10px;
+    margin-top: 5px;
+}
+
+
+.letra-blanca { color: var(--color-letra-blanca) !important; }
+
+/* ✅ AL HACER CLIC: CAMBIA DE COLOR */
+.boton-azul:active,
+.boton-azul:focus {
+    background-color: #0a3463 !important;
+    outline: none;
+}
+.subcuadro-botones{
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px;
+    margin-top: 4px;
+}
