@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad Administrativa</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <header id="sol-0">
+        SISTEMA DE ACTIVOS FIJOS
+    </header>
+
+    <div class="sol-1">
+        <p id="sol-2">Unidad Administrativa</p>
+        <h1 id="sol-3">ADMINISTRACION UNIDAD ADMINISTRATIVA</h1>
+
+        <div class="gato-1">
+            <table id="gato-2">
+                <thead>
+                    <tr>
+                        <th id="gato-3">UNIDAD</th>
+                        <th id="gato-4">DESCRIPCION</th>
+                        <th id="gato-5">CIUDAD</th>
+                    </tr>
+                </thead>
+                <tbody id="seiya"></tbody>
+            </table>
+        </div>
+
+        <p id="mensaje-estado"></p>
+
+        <div class="boton-miu">
+            <button id="boton1-miu" onclick="nuevouni()">Nuevo</button>
+            <button id="boton2-miu" onclick="editaruni()">Editar</button>
+            <button id="boton3-miu" onclick="eliminaruni()">Eliminar</button>
+            <button id="boton4-miu" onclick="seleccionaruni()">Seleccionar</button>
+            <button id="boton5-miu" onclick="saliruni()">Salir</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-form">
+        <div class="modal-caja">
+            <div class="modal-titulo" id="modal-titulo-texto">Nueva Unidad Administrativa</div>
+            <div class="modal-cuerpo">
+                <div>
+                    <label for="input-unidad">Unidad:</label>
+                    <input type="number" id="input-unidad" placeholder="Ej: 1">
+                </div>
+                <div>
+                    <label for="input-descrip">Descripción:</label>
+                    <input type="text" id="input-descrip" placeholder="Ej: GACETA OFICIAL DE BOLIVIA">
+                </div>
+                <div>
+                    <label for="input-ciudad">Ciudad:</label>
+                    <input type="text" id="input-ciudad" placeholder="Ej: LAPAZ">
+                </div>
+                <div>
+                    <label for="input-entidad">Entidad:</label>
+                    <input type="number" id="input-entidad" placeholder="Ej:12 ">
+                </div>
+            </div>
+            <div class="modal-pie">
+                <button onclick="cerrarModal()">Cancelar</button>
+                <button id="btn-guardar" onclick="guardarUnidad()">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-eliminar">
+        <div class="modal-caja">
+            <div class="modal-titulo">Confirmar Eliminación</div>
+            <div class="modal-cuerpo">
+                <p id="texto-eliminar" style="color:#022644; font-size:14px;"></p>
+            </div>
+            <div class="modal-pie">
+                <button onclick="cerrarModalEliminar()">Cancelar</button>
+                <button onclick="confirmarEliminar()" style="background-image: linear-gradient(#126cd3,#565ddc,#4d6cdb);">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../javasr/unidad.js" defer></script>
+</body>
+</html>
