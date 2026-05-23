@@ -1,3 +1,9 @@
+/*inicio de unidad*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root {
     --color-principal: linear-gradient(#5791bc, #3b81ba, #17507e, #18456a, #022644);
