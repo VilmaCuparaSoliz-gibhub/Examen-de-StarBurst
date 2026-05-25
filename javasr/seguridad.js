@@ -3,45 +3,59 @@ let usuarios = [];
 let registroActual = 0;
 let copiaRespaldo;
 
-// ✅ AL INICIAR: RECIBE DATOS DEL INICIO DE SESIÓN
 window.onload = function() {
-    cargarDatos();
-};
+    const usuarioIngresado = localStorage.getItem("usuarioIngresado");
+    const claveNueva = localStorage.getItem("passwordIngresado");
+    cargarDatos(usuarioIngresado, claveNueva);
+}
 
-// ✅ CARGA DESDE EL SERVIDOR
-async function cargarDatos() {
+async function cargarDatos(usuarioDesdeLogin, claveDesdeLogin) {
     try {
         let res = await fetch(API_URL);
         if (!res.ok) throw new Error("Error");
         usuarios = await res.json();
         
         if (usuarios.length === 0) {
-            usuarios = [
-                { id:1, usuario:"admin", clave:"***", nombre:"administrador", descripcion:"", tipo:"administrador" },
-                { id:2, usuario:"op1", clave:"1234", nombre:"Operador Caja", descripcion:"", tipo:"operador" }
-            ];
+            usuarios = crearDatosPorDefecto(usuarioDesdeLogin, claveDesdeLogin);
         }
     } catch (e) {
-        // Datos por si el servidor está dormido
-        usuarios = [
-            { id:1, usuario:"admin", clave:"***", nombre:"administrador", descripcion:"", tipo:"administrador" },
-            { id:2, usuario:"op1", clave:"1234", nombre:"Operador Caja", descripcion:"", tipo:"operador" }
-        ];
+        usuarios = crearDatosPorDefecto(usuarioDesdeLogin, claveDesdeLogin);
     }
     mostrarRegistro();
 }
 
+function crearDatosPorDefecto(usuario, clave) {
+    return [
+        { 
+            id:1, 
+            usuario: usuario || "admin", 
+            clave: clave || "***", 
+            nombre:"administrador", 
+            descripcion:"", 
+            tipo:"administrador" 
+        },
+        { 
+            id:2, 
+            usuario:"op1", 
+            clave:"1234", 
+            nombre:"Operador Caja", 
+            descripcion:"", 
+            tipo:"operador" 
+        }
+    ];
+}
+
 function mostrarRegistro() {
-    if(usuarios.length === 0) return;
+    if(!usuarios || usuarios.length === 0) return;
     let u = usuarios[registroActual];
     
-    document.getElementById('usuario').value = u.usuario || "";
-    document.getElementById('clave').value = u.clave || "";
-    document.getElementById('nombre').value = u.nombre || "";
-    document.getElementById('descripcion').value = u.descripcion || "";
+    if(document.getElementById('usuario')) document.getElementById('usuario').value = u.usuario || "";
+    if(document.getElementById('clave')) document.getElementById('clave').value = u.clave || "";
+    if(document.getElementById('nombre')) document.getElementById('nombre').value = u.nombre || "";
+    if(document.getElementById('descripcion')) document.getElementById('descripcion').value = u.descripcion || "";
 
-    document.getElementById('op1').checked = (u.tipo === "operador");
-    document.getElementById('op2').checked = (u.tipo === "administrador");
+    if(document.getElementById('op1')) document.getElementById('op1').checked = (u.tipo === "operador");
+    if(document.getElementById('op2')) document.getElementById('op2').checked = (u.tipo === "administrador");
 
     bloquearTodo();
 }
@@ -50,21 +64,20 @@ function bloquearTodo() {
     let campos = ['usuario','clave','nombre','descripcion'];
     campos.forEach(id => {
         let el = document.getElementById(id);
-        el.readOnly = true;
+        if(el) el.readOnly = true;
     });
-    document.querySelectorAll('.zona-radio input').forEach(r => r.disabled = true);
+    document.querySelectorAll('input[name="tipo"]').forEach(r => r.disabled = true);
 }
 
 function desbloquearTodo() {
     let campos = ['usuario','clave','nombre','descripcion'];
     campos.forEach(id => {
         let el = document.getElementById(id);
-        el.readOnly = false;
+        if(el) el.readOnly = false;
     });
-    document.querySelectorAll('.zona-radio input').forEach(r => r.disabled = false);
+    document.querySelectorAll('input[name="tipo"]').forEach(r => r.disabled = false);
 }
 
-// ✅ GUARDA EN EL SERVIDOR
 async function guardarCambios(datos) {
     try {
         if(datos.id) {
@@ -88,16 +101,14 @@ async function guardarCambios(datos) {
 }
 
 // ==============================================
-// ✅ TODOS LOS BOTONES FUNCIONALES
+// ✅ BOTONES
 // ==============================================
 
-// Primero
 document.getElementById('b1').onclick = () => { 
     registroActual=0; 
     mostrarRegistro(); 
 };
 
-// Anterior
 document.getElementById('b2').onclick = () => { 
     if(registroActual>0){
         registroActual--; 
@@ -105,7 +116,6 @@ document.getElementById('b2').onclick = () => {
     }
 };
 
-// Siguiente
 document.getElementById('b3').onclick = () => { 
     if(registroActual<usuarios.length-1){
         registroActual++; 
@@ -113,21 +123,21 @@ document.getElementById('b3').onclick = () => {
     }
 };
 
-// Último
 document.getElementById('b4').onclick = () => { 
     registroActual=usuarios.length-1; 
     mostrarRegistro(); 
 };
 
-// Nuevo
 document.getElementById('b5').onclick = () => {
-    ['usuario','clave','nombre','descripcion'].forEach(id=>document.getElementById(id).value="");
-    document.getElementById('op1').checked=true;
+    ['usuario','clave','nombre','descripcion'].forEach(id=>{
+        let el = document.getElementById(id);
+        if(el) el.value="";
+    });
+    if(document.getElementById('op1')) document.getElementById('op1').checked=true;
     desbloquearTodo();
     registroActual = -1;
 };
 
-// Editar
 document.getElementById('b6').onclick = () => {
     if (usuarios[registroActual]) {
         copiaRespaldo = {...usuarios[registroActual]};
@@ -135,14 +145,13 @@ document.getElementById('b6').onclick = () => {
     }
 };
 
-// Guardar
 document.getElementById('b7').onclick = async () => {
     let datos = {
         usuario: document.getElementById('usuario').value.trim(),
         clave: document.getElementById('clave').value.trim(),
         nombre: document.getElementById('nombre').value.trim(),
         descripcion: document.getElementById('descripcion').value.trim(),
-        tipo: document.querySelector('input[name="tipo"]:checked').value
+        tipo: document.querySelector('input[name="tipo"]:checked')?.value || "operador"
     };
 
     if(!datos.usuario) return alert("⚠️ El campo USUARIO no puede estar vacío");
@@ -150,7 +159,6 @@ document.getElementById('b7').onclick = async () => {
     await guardarCambios(datos);
 };
 
-// ✅ CAMBIAR CONTRASEÑA (IGUAL AL MANUAL)
 document.getElementById('b10').onclick = () => {
     if(registroActual < 0 || !usuarios[registroActual]) return alert("⚠️ Selecciona un usuario primero");
 
@@ -165,7 +173,6 @@ document.getElementById('b10').onclick = () => {
     }
 };
 
-// Deshacer
 document.getElementById('b8').onclick = () => {
     if(copiaRespaldo && registroActual >= 0){
         usuarios[registroActual]=copiaRespaldo;
@@ -175,10 +182,11 @@ document.getElementById('b8').onclick = () => {
     }
 };
 
-// Salir
+// ✅ AQUÍ ESTÁ EL CAMBIO REAL: LA RUTA ES AHORA ../../index.html
 document.getElementById('b9').onclick = () => { 
     if(confirm("¿Seguro que deseas salir?")) {
         localStorage.clear();
-        window.location.href = "index.html";
+        // 🔥 ESTA ES LA LÍNEA DIFERENTE: SUBES DOS CARPETAS HASTA LLEGAR AL INDEX
+        window.location.href = "../../index.html"; 
     }
 };
